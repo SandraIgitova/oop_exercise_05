@@ -1,6 +1,10 @@
-cmake_minimum_required(VERSION 3.10)
-project(oop5)
+CC = g++
+FLAGS = -std=c++11 -Wall -Werror -Wno-sign-compare -Wno-unused-result
+FILES = *.cpp
+PROG = run
 
-set(CMAKE_CXX_STANDARD 17)
+all:
+	$(CC) $(FLAGS) -o $(PROG) $(FILES)
 
-add_executable(main main5.cpp)
+clean:
+	rm -f *.o run
